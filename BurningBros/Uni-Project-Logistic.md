@@ -87,6 +87,5 @@ High module: Bang Ke
 		- Form_tpye = "RVC"
 			
 	1. adsf
-	2. adf
-	3. adf
+
 	
