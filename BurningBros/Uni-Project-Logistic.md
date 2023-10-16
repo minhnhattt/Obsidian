@@ -1,4 +1,4 @@
-Domain: Logistic
+## Domain: Logistic
 
 Having 7 table
 High module: Bang Ke
@@ -55,9 +55,38 @@ High module: Bang Ke
 # BOM
 
 # Module Bang Ke
-**Function**: 
-1. Lookup
+- **Function**: 
 	1. Find CD and CIF
+		_ Using material code(BOM table) to find(ECUS table) then using start date and end date to filter
 	2. Find origin of the material
-	3. Deduction
-	4. 
+		_ Using material code(NPL/SP) and declaration number(So TK) to lookup on C/O table 
+		_ TH1: If data mapping with MC and DN => return "Reference No" & "Issued date" to declaration number and date of the BANGKE
+		_ TH2: If date not mapping with => using MC and DN to lookup on ANNEX10 table. If data mapping with MC & DN => return "Exporter" to declaration number of the BANGKE
+		_ IF all failed (there is no data mapping) => The material don't have any origin(xuất xứ)
+	3. Deduction: 
+		_ Calculate total material quantity: Total = BOM value * quantity
+		_ Search on Ecus: (+)
+			Total higher than total material  quantity
+			Newest date
+			Lowest "Don gia"
+		_ Fill 4 truong thong tin to BANG KE if it matched condition (+)
+	4. Result of the BANG KE
+		Use form_type to check: 
+			CTC: check by lookup HS code if result is valid or not
+			RVC: use formula to calculate the result to check if the result  
+			(If the form_type + result isn't valid, we'll recalculate again)
+			asdf
+			
+		- Form_type = "CTC"
+			Check HS code based on the "criteria to apply"
+			CC: base on 2HS code
+			CTH: ------- 4HS code
+			CTSH: ------ 6HS code
+			If the HS code of material difference with HS code of product, result is valid
+			
+		- Form_tpye = "RVC"
+			
+	1. adsf
+	2. adf
+	3. adf
+	
