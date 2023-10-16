@@ -53,3 +53,11 @@ High module: Bang Ke
 	10. Số hợp đồng
 	11. Ngày hợp đồng
 # BOM
+
+# Module Bang Ke
+**Function**: 
+1. Lookup
+	1. Find CD and CIF
+	2. Find origin of the material
+	3. Deduction
+	4. 
