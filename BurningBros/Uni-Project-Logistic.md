@@ -53,10 +53,15 @@ High module: Bang Ke
 	10. Số hợp đồng
 	11. Ngày hợp đồng
 # BOM
+- Function: 
+	- Read
+	- Update
+	- Delete
 
 # Module Bang Ke
 - **Function**: 
 	1. Find CD and CIF
+		_ Using product code(ECUS table) to find related material code on (BOM table)
 		_ Using material code(BOM table) to find(ECUS table) then using start date and end date to filter
 	2. Find origin of the material
 		_ Using material code(NPL/SP) and declaration number(So TK) to lookup on C/O table 
@@ -69,13 +74,12 @@ High module: Bang Ke
 			Total higher than total material  quantity
 			Newest date
 			Lowest "Don gia"
-		_ Fill 4 truong thong tin to BANG KE if it matched condition (+)
+		_ Fill 4 trường thông tin to BANG KE if it matched condition (+)
 	4. Result of the BANG KE
 		Use form_type to check: 
 			CTC: check by lookup HS code if result is valid or not
 			RVC: use formula to calculate the result to check if the result  
 			(If the form_type + result isn't valid, we'll recalculate again)
-			asdf
 			
 		- Form_type = "CTC"
 			Check HS code based on the "criteria to apply"
@@ -84,8 +88,14 @@ High module: Bang Ke
 			CTSH: ------ 6HS code
 			If the HS code of material difference with HS code of product, result is valid
 			
-		- Form_tpye = "RVC"
-			
-	1. adsf
-
-	
+		- Form_type = "RVC"
+			- Check the Giá is FOB or EXW
+				- If data is FOB => use the formula <=> result = (FOB-sum of material without origin)/FOB
+				- IF data is EXW => use the formula <=> result = (sum of material without origin)/EXW
+				- If data is EXW & "user input" type is progress_price => use the formula <=> result = "Trị giá nguyên liệu đầu vào không có xuất xứ VN / Trị giá xuất xưởng * 100"
+			- Check condition based on the "criteria to apply"
+			  <=> RVC{%}: use the value of the RVC to compare with result
+			- IF result is lower than condition => result is valid
+			- Add the the text: "Kết luận: hàng hoá {Đáp ứng/Không đáp ứng} tiêu chí {criteria to apply}"
+	5. aa
+	6. 

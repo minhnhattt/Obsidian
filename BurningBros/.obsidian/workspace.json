@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Everyday note/2023-10/16.md",
+                "file": "Everyday note/2023-10/17.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Invoice",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,12 +78,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 215.5
   },
   "right": {
     "id": "0fde61ccf06d174b",
@@ -164,6 +163,7 @@
   "active": "3adf4a29aeee8af3",
   "lastOpenFiles": [
     "Everyday note/2023-10/16.md",
+    "Everyday note/2023-10/17.md",
     "Uni-Project-Logistic.md",
     "Everyday note/2023-10",
     "Everyday note"
