@@ -16,7 +16,7 @@ High module: Bang Ke
 - Data structure:
 	- HS code
 	- Form: 
-		- Ex: AK, AJ, VJ, AAHZ, AHK, CPTPP, VC
+		- Ex: AK, AJ, VJ, AANZ, AHK, CPTPP, VC, VK, RCEP, AC, EUEA, EV, UKV, ATIGA
 # C/O list
 - Function:
 	- Import
@@ -59,6 +59,11 @@ High module: Bang Ke
 	- Delete
 
 # Module Bang Ke
+- Bảng kê work flow:
+	1. Using product code on the ECUS table to lookup material code on the BOM table, then store material name, unit and BOM value to BANGKE
+	   From material code on the BOM table lookup back to the ECUS table to pick HS code and import country
+	    => BANGKE have: **Material name - HS code - unit - BOM value - country**
+	2. Using material code (lookup in step 1) to find CIF and Customers Declaration date//Number on the ECUS table 
 - **Function**: 
 	1. Find CD and CIF
 		_ Using product code(ECUS table) to find related material code on (BOM table)

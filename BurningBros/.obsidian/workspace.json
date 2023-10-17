@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni-Project-Logistic.md",
+                "file": "Everyday note/2023-10/17.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni-Project-Logistic.md",
+                "file": "Everyday note/2023-10/17.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni-Project-Logistic.md"
+                "file": "Everyday note/2023-10/17.md"
               }
             }
           }
@@ -160,11 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3adf4a29aeee8af3",
+  "active": "78a1cd44ada77e63",
   "lastOpenFiles": [
-    "Everyday note/2023-10/16.md",
-    "Everyday note/2023-10/17.md",
     "Uni-Project-Logistic.md",
+    "Everyday note/2023-10/17.md",
+    "Everyday note/2023-10/16.md",
     "Everyday note/2023-10",
     "Everyday note"
   ]
