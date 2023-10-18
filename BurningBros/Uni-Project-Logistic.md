@@ -106,7 +106,6 @@ High module: Bang Ke
 		-----------------------------------------------------------------------
 		2. If form_type == RVC:
 			1. Check Giá is FOB or EXW to know the formula
-			   ----------------------------------------------------
 			   - Data = Giá FOB 
 			   - => Use formula: RS = (FOB - sum of material without origin) / FOB
 			   ----------------------------------------------------
