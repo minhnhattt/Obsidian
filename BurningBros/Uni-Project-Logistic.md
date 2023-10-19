@@ -134,52 +134,12 @@ Improvement:
 		   => origin = Viet Nam
 		2. Nếu register_form của purchase không match với import declaration number trên annex10 => origin = KHÔNG XX 
 
-Ms Lam and Ms Trang is on testing bangke feature, i see they confuse in how to test they dont' knơ how to start, i think they need a video or an user guide to instruct them how to use this feature.
+Ms Lam and Ms Trang is on testing bangke feature, i see they confuse in how to test they dont' know how to start, i think they need a video or an user guide to instruct them how to use this feature.
 
 About current status, yesterday they provide we an additional logic to improve the DB and to lookup data across table. Mr Ân have provide it to dev team and they on develop it, now they still on test 
 
+_ Our system is working completely
+_ We just modified some logic to lookup data on the BANGKE function 
+_ I'm following up for next requirement of UNI team
+_ Uni team is on testing BANGKE function and i think they need user guide or video or a training session to use our system 
 
-
-
-
-
-- **Function**: 
-	1. Find CD and CIF
-		_ Using product code(ECUS table) to find related material code on (BOM table)
-		_ Using material code(BOM table) to find(ECUS table) then using start date and end date to filter
-	2. Find origin of the material
-		_ Using material code(NPL/SP) and declaration number(So TK) to lookup on C/O table 
-		_ TH1: If data mapping with MC and DN => return "Reference No" & "Issued date" to declaration number and date of the BANGKE
-		_ TH2: If date not mapping with => using MC and DN to lookup on ANNEX10 table. If data mapping with MC & DN => return "Exporter" to declaration number of the BANGKE
-		_ IF all failed (there is no data mapping) => The material don't have any origin(xuất xứ)
-	3. Deduction: 
-		_ Calculate total material quantity: Total = BOM value * quantity
-		_ Search on Ecus: (+)
-			Total higher than total material  quantity
-			Newest date
-			Lowest "Don gia"
-		_ Fill 4 trường thông tin to BANG KE if it matched condition (+)
-	4. Result of the BANG KE
-		Use form_type to check: 
-			CTC: check by lookup HS code if result is valid or not
-			RVC: use formula to calculate the result to check if the result  
-			(If the form_type + result isn't valid, we'll recalculate again)
-			
-		- Form_type = "CTC"
-			Check HS code based on the "criteria to apply"
-			CC: base on 2HS code
-			CTH: ------- 4HS code
-			CTSH: ------ 6HS code
-			If the HS code of material difference with HS code of product, result is valid
-			
-		- Form_type = "RVC"
-			- Check the Giá is FOB or EXW
-				- If data is FOB => use the formula <=> result = (FOB-sum of material without origin)/FOB
-				- IF data is EXW => use the formula <=> result = (sum of material without origin)/EXW
-				- If data is EXW & "user input" type is progress_price => use the formula <=> result = "Trị giá nguyên liệu đầu vào không có xuất xứ VN / Trị giá xuất xưởng * 100"
-			- Check condition based on the "criteria to apply"
-			  <=> RVC{%}: use the value of the RVC to compare with result
-			- IF result is lower than condition => result is valid
-			- Add the the text: "Kết luận: hàng hoá {Đáp ứng/Không đáp ứng} tiêu chí {criteria to apply}"
-	5. aa
-	6. 
