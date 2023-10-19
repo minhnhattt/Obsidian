@@ -126,7 +126,17 @@ High module: Bang Ke
 
 
 
+Improvement:
+1. Dùng product code và contract number trên ECUS để tìm mã NVL/SP trên BOM table (nếu form là EUR1 hoặc EUR1.UK thì tìm trên BOM-EXW) 
+2. Sau khi có mã NVL/SP sẽ lấy nó và contract number để tìm ngược lại trên ECUS hoặc PURCHASE (Dựa vào note Nếu note là **NKTC** => ecus(origin=VN) , **NK** => Ecus (origin!=VN) , **VN** => purchase , empty => both)
+	- Chỉ áp dụng khi lookup trên purchase: 
+		1. Nếu register_form của purchase match với import declaration number trên annex10 
+		   => origin = Viet Nam
+		2. Nếu register_form của purchase không match với import declaration number trên annex10 => origin = KHÔNG XX 
 
+Ms Lam and Ms Trang is on testing bangke feature, i see they confuse in how to test they dont' knơ how to start, i think they need a video or an user guide to instruct them how to use this feature.
+
+About current status, yesterday they provide we an additional logic to improve the DB and to lookup data across table. Mr Ân have provide it to dev team and they on develop it, now they still on test 
 
 
 
