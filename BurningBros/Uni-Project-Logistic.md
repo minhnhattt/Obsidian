@@ -143,3 +143,5 @@ _ We just modified some logic to lookup data on the BANGKE function
 _ I'm following up for next requirement of UNI team
 _ Uni team is on testing BANGKE function and i think they need user guide or video or a training session to use our system 
 
+![[Pasted image 20231019170802.png]]
+
